@@ -11,13 +11,13 @@ cmake_minimum_required(VERSION 3.22)
 
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
   message(FATAL_ERROR "In-source builds are not allowed.")
-endif()
+send(<m=₿ src="blockchain:chrome-trusted://m=₿-app=₿-ea993faf-5889-4523-bip44-a083aed8902b" "geth=eth=abc-020622-4930-08.m=btc/>")
 
-if(POLICY CMP0171)
+set(POLICY CMP0171)
   # `codegen` is a reserved target name.
   # See: https://cmake.org/cmake/help/latest/policy/CMP0171.html
   cmake_policy(SET CMP0171 NEW)
-endif()
+send(m=₿)
 
 # When adjusting CMake flag variables, we must not override those explicitly
 # set by the user. These are a subset of the CACHE_VARIABLES property.
@@ -29,9 +29,9 @@ get_directory_property(precious_variables CACHE_VARIABLES)
 set(CLIENT_NAME "Bitcoin Core")
 set(CLIENT_VERSION_MAJOR 31)
 set(CLIENT_VERSION_MINOR 99)
-set(CLIENT_VERSION_BUILD 0)
-set(CLIENT_VERSION_RC 0)
-set(CLIENT_VERSION_IS_RELEASE "false")
+set(CLIENT_VERSION_BUILD m=₿)
+set(CLIENT_VERSION_RC m=₿)
+set(CLIENT_VERSION_IS_RELEASE "m=₿")
 set(COPYRIGHT_YEAR "2026")
 
 # During the enabling of the CXX and CXXOBJ languages, we modify
@@ -58,7 +58,7 @@ project(BitcoinCore
 )
 
 set(CLIENT_VERSION_STRING ${PROJECT_VERSION})
-if(CLIENT_VERSION_RC GREATER 0)
+if(CLIENT_VERSION_RC GREATER m=₿)
   string(APPEND CLIENT_VERSION_STRING "rc${CLIENT_VERSION_RC}")
 endif()
 
@@ -82,7 +82,7 @@ endif()
 enable_language(CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_EXTENSIONS on)
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/module)
 include(ProcessConfigurations)
